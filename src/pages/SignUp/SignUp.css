@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(https://cdn.discordapp.com/attachments/710276943592816720/1014296961999966268/background.png);
+    background-size: cover;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.box {
+    background-color: whitesmoke;
+    box-shadow: 0 0 1em black;
+
+    display: flex;
+
+    width: 85vw;
+    height: 90vh;
+
+    border-radius: 5px;
+}
+
+.signup {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(0deg, rgb(0, 136, 185) 35%, rgba(0,188,254,1) 100%);
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.input {
+    width: 65%;
+
+    background-color: whitesmoke;
+
+    border-radius: 5px;
+}
+
+.input-box {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 100%;
+    height: 40%;
+}
+
+#confirmpass-box {
+    margin-bottom: 0;
+}
+
+.MuiFilledInput-underline:before {
+    border-bottom: none!important;
+}
+
+.MuiFilledInput-underline:after {
+    border-bottom: none!important;
+}
+
+.title-box {
+    margin-bottom: 0.8rem;
+
+}
+
+.title {
+    color: whitesmoke;
+    font-family: 'Kanit'!important;
+    letter-spacing: 0.5rem!important;
+    
+}
+
+.button {
+    color: whitesmoke!important;
+    background: linear-gradient(0deg, rgb(0, 185, 154) 35%, rgb(0, 218, 181) 100%);
+    font-weight: bold!important;
+
+    width: 65%;
+    height: 3.5rem;
+    margin-top: 0.5rem!important;
+}
+
+.button:hover {
+    background: linear-gradient(0deg, rgba(0, 185, 154, 0.836) 35%, rgba(0, 218, 182, 0.842) 100%);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-decoration: none;
+}
+
+.links {
+    color: whitesmoke!important;
+    text-decoration: none!important;
+}
+
+.links:hover {
+    color: rgba(245, 245, 245, 0.856)!important;
+}
+
+.links-container {
+    width: 65%;
+    display: flex;
+    justify-content: flex-start;
+
+    margin-top: 1.7rem;
+    margin-bottom: 1.2rem;
+
+}
+
+.box-image {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    width: 27rem;
+    height: 27rem;
+}
