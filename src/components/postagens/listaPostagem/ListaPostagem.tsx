@@ -14,6 +14,7 @@ function ListaPostagem() {
 
   useEffect(() => {
     if (token == "") {
+      console.log(token)
       alert("Você precisa estar logado")
       navigate("/login")
 
@@ -51,7 +52,7 @@ function ListaPostagem() {
                   {post.texto}
                 </Typography>
                 <Typography variant="body2" component="p">
-                  {post.tema?.descricao}
+                  {post.tema?.tema}
                 </Typography>
               </CardContent>
               <CardActions>
