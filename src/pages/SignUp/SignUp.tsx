@@ -76,7 +76,7 @@ function SignUp() {
 
                 <Box className="container">
 
-                    <Box className="box">
+                    <Box className="signup-box">
 
                         <Box className="box-image">
 

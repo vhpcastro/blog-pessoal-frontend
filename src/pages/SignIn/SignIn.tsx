@@ -6,14 +6,16 @@ import { Box } from '@mui/material';
 import { login } from "../../services/Service";
 import UserLogin from "../../models/UserLogin";
 import { Link, useNavigate } from 'react-router-dom';
-import useLocalStorage from "react-use-localstorage";
+import { useDispatch } from 'react-redux';
+import { addToken } from '../../store/tokens/actions';
 
 import './SignIn.css';
 
 function SignIn() {
 
     let navigate = useNavigate();
-    const [token, setToken] = useLocalStorage("token");
+    const dispatch = useDispatch();
+    const [token, setToken] = useState("");
     const [userLogin, setUserLogin] = useState<UserLogin>({
         id: 0,
         nome: "",
@@ -32,6 +34,7 @@ function SignIn() {
 
     useEffect(() => {
         if (token != "") {
+            dispatch(addToken(token))
             navigate("/home");
         }
     }, [token]);
@@ -53,7 +56,7 @@ function SignIn() {
 
                 <Box className="container">
 
-                    <Box className="box">
+                    <Box className="signin-box">
 
                         <Box className="signin">
 
