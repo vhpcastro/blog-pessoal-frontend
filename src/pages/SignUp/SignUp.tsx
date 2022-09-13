@@ -1,14 +1,12 @@
 import React from 'react';
 import { useState, useEffect, ChangeEvent } from "react";
 import { useNavigate } from "react-router-dom";
-
 import { Grid, TextField, Typography, Button, } from '@material-ui/core';
 import { Box } from '@mui/material';
-
 import { Link } from 'react-router-dom';
-
 import User from "../../models/User";
 import { cadastraUsuario } from "../../services/Service";
+import { toast } from 'react-toastify';
 
 import './SignUp.css';
 
@@ -56,14 +54,40 @@ function SignUp() {
         if (confirmarSenha === user.senha && user.senha.length >= 8) {
             try {
                 await cadastraUsuario(`/usuarios/cadastrar`, user, setUserResult);
-                alert("Usuário cadastrado com sucesso");
+                toast.success('Usuário cadastrado com sucesso.', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    });
 
             } catch (error) {
-                console.log(`Error: ${error}`);
-                alert("Usuário já existente");
+                
+                toast.error('Usuário já existente.', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    });
+                    
             }
         } else {
-            alert("Insira no miníno 8 caracteres na senha.");
+            toast.warn('Insira uma senha de no mínimo 8 caracteres.', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
+                
 
             setUser({ ...user, senha: "" });
             setConfirmarSenha("");

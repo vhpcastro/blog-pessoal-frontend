@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 import Footer from './components/statics/footer/footer';
 import Navbar from './components/statics/navbar/navbar';
@@ -17,11 +18,14 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
 
     <Provider store={store}>
+
+      <ToastContainer />
 
       <Router>
 
